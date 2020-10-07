@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    /*-------------------------------------
+    # TAMAÑO GENERAL DE LAS UNIDADES em 
+    -------------------------------------*/
+    font-size: 10px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.header {
+    /*Color de fondo degradado  */
+    background: rgba(85, 82, 255, 1);
+    background: -moz-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(85, 82, 255, 1)), color-stop(100%, rgba(137, 135, 255, 1)));
+    background: -webkit-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5552ff', endColorstr='#8987ff', GradientType=1);
+}
+
+.fijarMenu {
+    background-color: #fff;
+    top: 0px;
+    position: fixed;
+    transition: 1s;
+}
+
+
+/*------------------------------------
+#Sección de la barra redes sociales 
+------------------------------------*/
+
+#rm_cajaRedesSociales {
+    width: 120em;
+    height: 5em;
+    margin: auto;
+}
+
+.rm_cajaIconos {
+    width: 10em;
+    display: flex;
+    float: right;
+    margin-top: 2em;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.none {
+    display: none;
+}
+
+.rm_cajaIconos i {
+    color: #fff;
+    font-size: 1.6em;
+}
+
+
+/*--------------------------
+#Sección del menu y logo
+--------------------------*/
+
+#rm_menu {
+    width: 120em;
+    height: 6em;
+    margin: auto;
+}
+
+.rm_logo {
+    display: block;
+    width: 20em;
+    float: left;
+    margin-top: 1em;
+}
+
+.noneQuitar {
+    display: none;
+    width: 25em;
+    float: left;
+    margin-top: 1em;
+}
+
+.rm_nav {
+    list-style: none;
+    width: 25em;
+    float: right;
+    margin-top: 1.7em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.3em;
+    letter-spacing: 0.2em;
+}
+
+.textMenu {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 900;
+}
+
+.textFijo {
+    color: #413e66;
+}
+
+.rm_nav li a:hover {
+    color: gold;
+    transition: 0.4s;
+}
+
+
+/*------------------------------
+#Seccion de boton de contacto
+------------------------------*/
+
+.rm_botonContactar {
+    display: block;
+    float: right;
+    text-decoration: none;
+    background-color: rgb(185, 27, 209);
+    color: #fff;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 100px;
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-left: 2em;
+    transition: 0.4s;
+}
+
+.rm_botonContactar:hover {
+    background-color: #2ECC71;
+    transition: 0.4s;
+}
+
+
+/*--------------------
+#Configuración mobil
+--------------------*/
+
+#check {
+    display: none;
+}
+
+.botonesMenuReso {
+    width: 40em;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+#botonMenu {
+    display: none;
+}
+
+@media only screen and (max-width:767px) {
+    /*--------------------
+    #Configuración mobil
+    --------------------*/
+    #rm_cajaRedesSociales {
+        display: none;
+    }
+    #rm_menu {
+        width: 100%;
+        background-color: #fff;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    #rm_logo {
+        display: none;
+    }
+    #rm_logo2 {
+        display: block;
+        width: 20em;
+    }
+    .rm_botonContactar {
+        display: none;
+    }
+    #botonMenu {
+        display: block;
+    }
+    .rm_nav {
+        margin: 0;
+        padding: 0;
+        background-color: rebeccapurple;
+        /* background-color: rgba(137, 135, 255, 1); */
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        right: -500px;
+        top: 0;
+        transition: 1s;
+        display: block;
+        position: fixed;
+    }
+    .rm_nav li {
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+        display: block;
+    }
+    .textMenu {
+        display: block;
+    }
+    .botonesMenuReso {
+        margin-top: 5em;
+        width: 100%;
+        display: block;
+    }
+    #botonMenu {
+        float: right;
+        width: 2.5em;
+        height: 2.5m;
+        top: 1em;
+        right: 1em;
+        z-index: 100;
+        position: absolute;
+    }
+    #check:checked~.rm_nav {
+        right: 0;
+    }
+    .textFijo {
+        color: #fff;
+    }
+}
+
+
+/*Sección del section de ejemplo*/
+
+.rm_ejemploSection {
+    width: 100%;
+    margin: auto;
+    height: 100em;
+    background: rgba(85, 82, 255, 1);
+    background: -moz-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(85, 82, 255, 1)), color-stop(100%, rgba(137, 135, 255, 1)));
+    background: -webkit-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(85, 82, 255, 1) 0%, rgba(137, 135, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5552ff', endColorstr='#8987ff', GradientType=1);
+}
